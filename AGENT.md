@@ -24,6 +24,11 @@ Si dos reglas entran en conflicto, manda `00-modo-aprendizaje.md`.
 - Git inicializado (rama `main`).
 - Se descartó el Módulo 0 de C# en consola porque el usuario ya domina C#. Se borró `csharp/`;
   `WaveMath` quedó en el historial (commit `02a1522`) y se reescribirá en Unity con TDD.
-- Siguiente paso: **Módulo 1, paso 1**. Crear el proyecto Unity (Universal 3D) en `TopDownShooter/`.
+- ✅ Paso 1: proyecto Unity 6.3 URP en `TopDownShooter/` (un solo repo en la raíz, `.gitattributes`
+  en la raíz, Git LFS activo, paquetes de plantilla innecesarios eliminados).
+- ✅ Paso 2: `Assets/_Project/` con `TopDown.Core` (noEngineReferences), `TopDown.Runtime` y
+  `TopDown.Tests.EditMode`. VS Code se abre desde Unity mediante el wrapper
+  `~/.local/share/unity-vscode/code` (`flatpak-spawn --host`), porque Unity corre en el sandbox de Flatpak.
+- Siguiente paso: **paso 3**, `WaveMath` y `Health` con TDD en el Test Runner.
 
 Mantén esta sección al día cuando se complete un paso.

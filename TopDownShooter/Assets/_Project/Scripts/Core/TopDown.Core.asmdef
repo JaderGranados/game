@@ -1,0 +1,5 @@
+{
+    "name": "TopDown.Core",
+    "rootNamespace": "TopDown.Core",
+    "noEngineReferences": true
+}
