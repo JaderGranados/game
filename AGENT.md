@@ -32,6 +32,13 @@ Si dos reglas entran en conflicto, manda `00-modo-aprendizaje.md`.
 - ✅ Paso 3: `WaveMath` (con `checked`) y `Health` en Core, con 28 tests EditMode. Decisión: recibir daño
   o curarse estando muerto es un **no-op** (es una situación normal del juego, no un error del programador).
   Los paquetes `com.unity.sdk.*`, `toolchain.*` y `sysroot.*` los restaura el editor: no se quitan.
-- Siguiente paso: **paso 4**, escena de arena (suelo, paredes, cámara) y lectura del YAML de la escena.
+- ✅ Paso 4: escena `Assets/_Project/Scenes/Arena.unity` (arena de 30×30 m dentro de `Environment`, con escala 1;
+  cámara en (0, 20, -10) a 65°). Vistos: GameObject/Transform/componentes, YAML de la escena, fileID/GUID,
+  transform local frente a global, cuaterniones.
+- 🔄 Paso 5a (en curso): materiales `Ground`, `Wall` y `Player` (URP/Lit), cápsula `Player` y script temporal
+  `Runtime/Diagnostics/LifecycleProbe.cs` para estudiar el ciclo de vida. Pendiente: usar `logEveryNFrames`,
+  repetir el experimento del componente desactivado antes de Play, la pregunta de renombrar un campo
+  serializado (`FormerlySerializedAs`), borrar el probe y hacer el commit.
+- Siguiente: 5b (asset de Input Actions), 5c (`InputReader`), 5d (movimiento con `Rigidbody`).
 
 Mantén esta sección al día cuando se complete un paso.
