@@ -29,6 +29,9 @@ Si dos reglas entran en conflicto, manda `00-modo-aprendizaje.md`.
 - ✅ Paso 2: `Assets/_Project/` con `TopDown.Core` (noEngineReferences), `TopDown.Runtime` y
   `TopDown.Tests.EditMode`. VS Code se abre desde Unity mediante el wrapper
   `~/.local/share/unity-vscode/code` (`flatpak-spawn --host`), porque Unity corre en el sandbox de Flatpak.
-- Siguiente paso: **paso 3**, `WaveMath` y `Health` con TDD en el Test Runner.
+- ✅ Paso 3: `WaveMath` (con `checked`) y `Health` en Core, con 28 tests EditMode. Decisión: recibir daño
+  o curarse estando muerto es un **no-op** (es una situación normal del juego, no un error del programador).
+  Los paquetes `com.unity.sdk.*`, `toolchain.*` y `sysroot.*` los restaura el editor: no se quitan.
+- Siguiente paso: **paso 4**, escena de arena (suelo, paredes, cámara) y lectura del YAML de la escena.
 
 Mantén esta sección al día cuando se complete un paso.
