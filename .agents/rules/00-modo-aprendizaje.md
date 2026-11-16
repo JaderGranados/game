@@ -24,13 +24,16 @@ arquitectura. Terminar rápido el juego NO es el objetivo. Esta regla prevalece 
 - Saltarse pasos porque "son fáciles".
 
 ## Perfil del usuario
-- Le gusta **programar**; conoce poco de Unity.
+- Le gusta **programar**. Domina **C#** a nivel intermedio-avanzado; conoce poco de **Unity**.
+- **No enseñes C# básico** (clases, excepciones, colecciones, LINQ…). Enfócate en Unity y en
+  lo que cambia del C# de .NET al de Unity: C# 9 / .NET Standard 2.1, ciclo de vida,
+  serialización, `null` sobrecargado, corrutinas, asignaciones y GC.
+- Revisa su C# de forma breve y directa, sin explicar lo que ya sabe.
 - Prioriza las soluciones **por código** frente a configurar cosas a mano en el Inspector.
 - Cuando haya que usar el editor de Unity, explica qué ocurre por debajo (qué se guarda en la
   escena o el prefab, qué se serializa) para que no sea "hacer clic y ya".
 - Cuando un trabajo manual se repita, y después de que el usuario lo haya hecho una vez a mano,
   propón automatizarlo con código (scripts de editor, por ejemplo).
-- Si un concepto es de C# en general y no de Unity, enséñalo primero en C# de consola.
 
 ## Si el usuario pide "hazlo tú"
 Se puede escribir el código, pero hay que explicarlo línea por línea o bloque por bloque y

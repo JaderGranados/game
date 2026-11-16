@@ -1,7 +1,7 @@
 # 03 · Convenciones de Unity
 
 ## Versión y paquetes
-- Unity **6 LTS** (la versión más reciente instalada desde Unity Hub).
+- Unity **6.3 LTS** (`6000.3.28f1`), instalado desde Unity Hub.
 - Render pipeline: **URP** (plantilla "Universal 3D").
 - Paquetes: Input System, Test Framework, uGUI (con TextMeshPro para el texto).
   Cualquier paquete nuevo se discute antes de añadirlo.

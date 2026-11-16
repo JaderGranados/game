@@ -20,11 +20,10 @@ Lee y sigue **todas** las reglas de `.agents/rules/`, en orden:
 Si dos reglas entran en conflicto, manda `00-modo-aprendizaje.md`.
 
 ## Estado actual
-- Unity Hub instalado (Flatpak). El editor de Unity se está instalando (lo hace el usuario).
-- .NET SDK 10 y VS Code con C# Dev Kit disponibles.
-- ✅ Lección 0.1: solución `csharp/TopDown.slnx` con `TopDown.Core` (netstandard2.1, C# 9) y
-  `Playground`. `WaveMath.EnemyCount` con guard clauses y `checked`. Vistos: top-level statements,
-  excepciones, fail fast, try/catch, overflow de `int`.
-- Siguiente paso: inicializar Git y primer commit; luego **lección 0.2** (clase `Health`).
+- Unity Hub (Flatpak) y Unity **6000.3.28f1** instalados. .NET SDK 10 y VS Code con C# Dev Kit.
+- Git inicializado (rama `main`).
+- Se descartó el Módulo 0 de C# en consola porque el usuario ya domina C#. Se borró `csharp/`;
+  `WaveMath` quedó en el historial (commit `02a1522`) y se reescribirá en Unity con TDD.
+- Siguiente paso: **Módulo 1, paso 1**. Crear el proyecto Unity (Universal 3D) en `TopDownShooter/`.
 
 Mantén esta sección al día cuando se complete un paso.
