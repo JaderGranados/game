@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Playground/Playground.csproj" />
+    <Project Path="src/TopDown.Core/TopDown.Core.csproj" />
+  </Folder>
+</Solution>
