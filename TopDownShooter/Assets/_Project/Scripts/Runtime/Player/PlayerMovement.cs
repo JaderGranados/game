@@ -4,7 +4,7 @@ using UnityEngine;
 namespace TopDown.Player
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class PlayerMovement : MonoBehaviour
+    public sealed class PlayerMovement : MonoBehaviour
     {
         [SerializeField]
         private InputReader inputReader;
@@ -34,8 +34,8 @@ namespace TopDown.Player
         private void FixedUpdate()
         {
             Vector2 moveInput = playerMoveInput;
-            Vector3 linearVelocity = new(moveInput.x, rb.linearVelocity.y, moveInput.y);
-            rb.linearVelocity = linearVelocity * playerConfig.MoveSpeed;
+            Vector3 linearVelocity = new(moveInput.x * playerConfig.MoveSpeed, rb.linearVelocity.y, moveInput.y * playerConfig.MoveSpeed);
+            rb.linearVelocity = linearVelocity;
         }
         #endregion
     }
