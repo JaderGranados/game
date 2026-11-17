@@ -2,6 +2,7 @@
     "name": "TopDown.Runtime",
     "rootNamespace": "TopDown",
     "references": [
-        "TopDown.Core"
+        "TopDown.Core",
+        "Unity.InputSystem"
     ]
 }
