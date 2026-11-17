@@ -35,10 +35,13 @@ Si dos reglas entran en conflicto, manda `00-modo-aprendizaje.md`.
 - ✅ Paso 4: escena `Assets/_Project/Scenes/Arena.unity` (arena de 30×30 m dentro de `Environment`, con escala 1;
   cámara en (0, 20, -10) a 65°). Vistos: GameObject/Transform/componentes, YAML de la escena, fileID/GUID,
   transform local frente a global, cuaterniones.
-- 🔄 Paso 5a (en curso): materiales `Ground`, `Wall` y `Player` (URP/Lit), cápsula `Player` y script temporal
-  `Runtime/Diagnostics/LifecycleProbe.cs` para estudiar el ciclo de vida. Pendiente: usar `logEveryNFrames`,
-  repetir el experimento del componente desactivado antes de Play, la pregunta de renombrar un campo
-  serializado (`FormerlySerializedAs`), borrar el probe y hacer el commit.
-- Siguiente: 5b (asset de Input Actions), 5c (`InputReader`), 5d (movimiento con `Rigidbody`).
+- ✅ Paso 5a: materiales `Ground`, `Wall` y `Player` (URP/Lit). Visto con un `LifecycleProbe` temporal (ya borrado):
+  orden del ciclo de vida, `Update` frente a `FixedUpdate`, serialización por nombre de campo (`FormerlySerializedAs`).
+  El GameObject `Player` se borró: se recreará como prefab en el 5d.
+- ✅ Paso 5b: `Assets/_Project/Input/PlayerControls.inputactions` (map `Gameplay`: Move, Aim, Fire; WASD por
+  posición física) con clase generada `TopDown.Input.PlayerControls` en `Scripts/Runtime/Input/`.
+  Se quitaron las Project-wide Actions de la plantilla. `TopDown.Runtime` referencia `Unity.InputSystem`.
+- Siguiente: **5c**, `InputReader` (ScriptableObject que implementa `PlayerControls.IGameplayActions`);
+  luego 5d (prefab del jugador y movimiento con `Rigidbody`).
 
 Mantén esta sección al día cuando se complete un paso.
