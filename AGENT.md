@@ -41,7 +41,13 @@ Si dos reglas entran en conflicto, manda `00-modo-aprendizaje.md`.
 - ✅ Paso 5b: `Assets/_Project/Input/PlayerControls.inputactions` (map `Gameplay`: Move, Aim, Fire; WASD por
   posición física) con clase generada `TopDown.Input.PlayerControls` en `Scripts/Runtime/Input/`.
   Se quitaron las Project-wide Actions de la plantilla. `TopDown.Runtime` referencia `Unity.InputSystem`.
-- Siguiente: **5c**, `InputReader` (ScriptableObject que implementa `PlayerControls.IGameplayActions`);
-  luego 5d (prefab del jugador y movimiento con `Rigidbody`).
+- ✅ Paso 5c: `InputReader` (ScriptableObject, `Scripts/Runtime/Input/`; asset en
+  `ScriptableObjects/Input/`) que implementa `PlayerControls.IGameplayActions` y expone `MoveChanged`,
+  `FirePressed`/`FireReleased` y `AimPosition`.
+- ✅ Paso 5d: `PlayerConfig` (asset en `ScriptableObjects/Config/`), `PlayerMovement` (velocidad en XZ,
+  conserva la Y de la física) y `Prefabs/Player.prefab` (Rigidbody con Interpolate y rotación X/Z congelada),
+  instanciado en `Arena`. Vistos: prefabs y overrides, lambdas que no se desuscriben, interpolación, backing fields.
+- Siguiente: **paso 6**, apuntar con el ratón (`PlayerAim`, screen → world con `Plane.Raycast`,
+  rotación con `MoveRotation`, un prefab no puede referenciar objetos de la escena).
 
 Mantén esta sección al día cuando se complete un paso.
